@@ -41,8 +41,8 @@ def create_app():
     scheduler.add_job(
         func=lambda: blockchain.mine_mempool_transactions(),
         trigger='cron',
-        hour=15, 
-        minute=26,
+        hour=00, 
+        minute=00,
         timezone=blockchain.fusohorario
     ) 
     scheduler.start()
